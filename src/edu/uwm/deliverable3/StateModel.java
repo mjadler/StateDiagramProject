@@ -48,7 +48,7 @@ public class StateModel {
 					throw new NullPointerException("Cannot have a null transition");
 			}
 			if(tm.getSuccesor() == this){
-				throw new IllegalArgumentException("Cannot transition to itself");
+					throw new IllegalArgumentException("Cannot transition to itself");
 			}
 			else pointers.add(tm);
 		}
