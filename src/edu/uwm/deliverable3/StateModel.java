@@ -41,6 +41,16 @@ public class StateModel {
 			
 		}
 		
+		public boolean editName(String newName){
+			
+			if(newName != this.name){
+				this.name = newName;
+				return true;
+			}
+			else return false;
+			
+		}
+		
 		//Setters
 		public void addTransition(TransitionModel tm){
 			
