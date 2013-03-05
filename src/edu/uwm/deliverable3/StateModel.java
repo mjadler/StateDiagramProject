@@ -57,9 +57,10 @@ public class StateModel {
 			if(tm == null){
 					return false;
 			}
-			if(tm.getSuccesor() == this){
-					return false;
+			if(tm.getSuccesor() == this || tm.getPredecesors() == this){
+						return false;
 			}
+			
 			else pointers.add(tm); return true;
 		}
 

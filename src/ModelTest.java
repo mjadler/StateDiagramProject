@@ -20,7 +20,7 @@ public class ModelTest {
 		
 	}
 
-	@Test (expected = NullPointerException.class)
+	@Test
 	public void testTransitionNotAdded() {
 		
 		assertFalse(defaultStateModel.addTransition(null));
@@ -28,7 +28,7 @@ public class ModelTest {
 		
 	}
 	
-	@Test (expected = IllegalArgumentException.class)
+	@Test
 	public void testTransitionAlreadyAdded(){ 
 		
 		StateModel otherStateModel = new StateModel();
