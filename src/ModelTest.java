@@ -23,7 +23,7 @@ public class ModelTest {
 	@Test (expected = NullPointerException.class)
 	public void testTransitionNotAdded() {
 		
-		defaultStateModel.addTransition(null);
+		assertFalse(defaultStateModel.addTransition(null));
 		assertEquals(0 , defaultStateModel.getSuccesors().size());
 		
 	}
@@ -31,7 +31,10 @@ public class ModelTest {
 	@Test (expected = IllegalArgumentException.class)
 	public void testTransitionAlreadyAdded(){ 
 		
-		
+		StateModel otherStateModel = new StateModel();
+		TransitionModel t1 = new TransitionModel(defaultStateModel,otherStateModel);
+		assertTrue(defaultStateModel.addTransition(t1));
+		assertFalse(defaultStateModel.addTransition(t1));
 		
 	}
 	
@@ -41,7 +44,8 @@ public class ModelTest {
 	public void testTranitionToSelf(){
 		
 		defaultTransition = new TransitionModel("jfdkljdfs", defaultStateModel, defaultStateModel);
-		defaultStateModel.addTransition(defaultTransition);		
+		assertFalse(defaultStateModel.addTransition(defaultTransition));		
+		
 		
 	}
 	
