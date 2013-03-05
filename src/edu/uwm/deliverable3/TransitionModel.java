@@ -1,8 +1,5 @@
 package edu.uwm.deliverable3;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /*Program Created by Software Engineering Group: 13013 (BoB)*/
 		//Alex Hart
 		//Michael Adler

@@ -12,7 +12,7 @@ import java.util.List;
 public class StateModel {
 	
 		private String name;
-		private List<TransitionModel> pointsTo = new ArrayList<TransitionModel>();
+		private List<TransitionModel> pointers = new ArrayList<TransitionModel>();
 		
 		//Constructors
 		
@@ -31,7 +31,7 @@ public class StateModel {
 		//Getters
 		public List<TransitionModel> getSuccesors(){
 			
-			return pointsTo;
+			return pointers;
 			
 		}
 		
@@ -50,7 +50,7 @@ public class StateModel {
 			if(tm.getSuccesor() == this){
 					throw new IllegalArgumentException("Cannot transition to itself");
 			}
-			else pointsTo.add(tm);
+			else pointers.add(tm);
 		}
 
 		//Output as XML
@@ -59,8 +59,8 @@ public class StateModel {
 			StringBuilder sb = new StringBuilder();
 				
 			sb.append("<state name=\""+name+"\">\n" );
-			for(int i = 0; i< pointsTo.size(); i++){
-				sb.append("		"+pointsTo.get(i).toXML());
+			for(int i = 0; i< pointers.size(); i++){
+				sb.append("		"+pointers.get(i).toXML());
 			}
 			sb.append("</state>\n");
 			
