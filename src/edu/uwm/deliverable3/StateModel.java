@@ -12,20 +12,22 @@ import java.util.List;
 public class StateModel {
 	
 		private String name;
+		private Object data;
 		private List<TransitionModel> pointers = new ArrayList<TransitionModel>();
 		
 		//Constructors
 		
-		public StateModel(String name){
+		public StateModel(String name, Object data){
 			
 			this.name = name;
+			this.data = data;
 				
 		}
 		
-		public StateModel(){
+		public StateModel(Object data){
 			
 			this.name = "StateModelDefaultName";
-			
+			this.data = data;
 		}
 		
 		//Getters
