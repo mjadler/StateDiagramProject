@@ -69,8 +69,23 @@ public class ModelTest {
 	}
 	
 	//Alex Tests
-	@Test (expected = NullPointerException.class)
-	public void toXMLOnEmptyTransitionModel(){
+	@Test
+	public void testXML(){
+		StateModel sm1 = new StateModel("one");
+		StateModel sm2 = new StateModel("two");
+		TransitionModel tm1 = new TransitionModel("t1to2", sm1, sm2);
 		
+		String NASTYXMLSTRING = 
+				"<state name=\"one\">\n"+
+				"		<transition name=\"t1to2\">\n"+
+				"				<transitionFrom>one</transitionFrom>\n"+
+				"				<transitionTo>two</transitionTo>\n"+
+				"</transition>\n"+
+				"</state>\n";
+		
+		System.out.println(NASTYXMLSTRING);
+		System.out.println(sm1.toXML());
+		
+		assertEquals(sm1.toXML(), NASTYXMLSTRING);
 	}
 }
