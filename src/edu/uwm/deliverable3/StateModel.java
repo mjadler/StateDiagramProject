@@ -24,7 +24,7 @@ public class StateModel {
 		
 		public StateModel(){
 			
-			this.name = "";
+			this.name = "StateModelDefaultName";
 			
 		}
 		

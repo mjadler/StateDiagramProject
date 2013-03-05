@@ -11,12 +11,20 @@ public class TransitionModel {
 	private StateModel succesor = new  StateModel();
 	private StateModel predecesor = new StateModel();
 	
-	//Constructor
+	//Constructors
 	public TransitionModel(String name, StateModel from, StateModel to){
 		
 		this.name = name;
 		succesor = to;
 		predecesor = from;
+		
+	}
+	//No Name Argument.
+	public TransitionModel(StateModel from, StateModel to){
+		
+		this.name = "Transition";
+		this.succesor = to;
+		this.predecesor = from;
 		
 	}
 	
@@ -43,7 +51,7 @@ public class TransitionModel {
 		sb.append("<transition name=\"" + name + "\">\n");
 		sb.append("				<transitionFrom>"+predecesor.getName()+"</transitionFrom>\n");
 		sb.append("				<transitionTo>"+succesor.getName()+"</transitionTo>");
-		sb.append("</task>\n");
+		sb.append("</transition>\n");
 		
 		return sb.toString();
 	}
