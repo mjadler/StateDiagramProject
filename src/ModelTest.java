@@ -29,7 +29,11 @@ public class ModelTest {
 	}
 	
 	@Test (expected = IllegalArgumentException.class)
-	public void testTransitionAlreadyAdded(){ }
+	public void testTransitionAlreadyAdded(){ 
+		
+		
+		
+	}
 	
 	
 	//MIKEY TESTS

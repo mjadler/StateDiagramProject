@@ -24,7 +24,7 @@ public class StateModel {
 		
 		public StateModel(){
 			
-			this.name = "";
+			this.name = "StateModelDefaultName";
 			
 		}
 		
@@ -38,6 +38,16 @@ public class StateModel {
 		public String getName(){
 			
 			return this.name;
+			
+		}
+		
+		public boolean editName(String newName){
+			
+			if(newName != this.name){
+				this.name = newName;
+				return true;
+			}
+			else return false;
 			
 		}
 		
