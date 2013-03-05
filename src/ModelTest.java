@@ -10,6 +10,8 @@ public class ModelTest {
 	
 	private StateModel defaultStateModel;
 
+	//BRADY TESTS
+	
 	@Before
 	public void constructModel() {
 		
@@ -26,15 +28,15 @@ public class ModelTest {
 	}
 	
 	@Test (expected = IllegalArgumentException.class)
-	public void testTransitionAlreadyAdded(){
+	public void testTransitionAlreadyAdded(){ }
+	
+	//MIKEY TESTS
+	@Test (expected = IllegalArgumentException.class)
+	public void testTranitionToSelf(){
 		
-		StateModel other = new StateModel();
-		TransitionModel tran1 = new TransitionModel("1",other,defaultStateModel);
-		defaultStateModel.addTransition(tran1);
-		assertEquals(1, defaultStateModel.getSuccesors().size());
-		defaultStateModel.addTransition(tran1);
-		assertEquals(1, defaultStateModel.getSuccesors().size());
+		
 		
 	}
-
+	
+	
 }
