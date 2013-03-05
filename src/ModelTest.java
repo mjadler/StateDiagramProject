@@ -40,13 +40,12 @@ public class ModelTest {
 	
 	
 	//MIKEY TESTS
-	@Test (expected = IllegalArgumentException.class)
+	@Test
 	public void testTranitionToSelf(){
 		
 		defaultTransition = new TransitionModel("jfdkljdfs", defaultStateModel, defaultStateModel);
 		assertFalse(defaultStateModel.addTransition(defaultTransition));		
-		
-		
+			
 	}
 	
 	public void testPathForwardEqualsBackward(){

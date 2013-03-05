@@ -54,14 +54,20 @@ public class StateModel {
 		//Setters
 		public boolean addTransition(TransitionModel tm){
 			
+			for(int i=0; i<pointers.size(); i++){
+				if(pointers.get(i) == tm){
+					return false;
+				}
+			}
+			
 			if(tm == null){
 					return false;
 			}
-			if(tm.getSuccesor() == this || tm.getPredecesors() == this){
+			if(tm.getSuccesor() == this){
 						return false;
 			}
-			
 			else pointers.add(tm); return true;
+			
 		}
 
 		//Output as XML
