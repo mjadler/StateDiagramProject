@@ -60,5 +60,9 @@ public class ModelTest {
 		
 	}
 	
-	
+	//Alex Tests
+	@Test (expected = NullPointerException.class)
+	public void toXMLOnEmptyTransitionModel(){
+		
+	}
 }
