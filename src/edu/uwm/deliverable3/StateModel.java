@@ -52,15 +52,15 @@ public class StateModel {
 		}
 		
 		//Setters
-		public void addTransition(TransitionModel tm){
+		public boolean addTransition(TransitionModel tm){
 			
 			if(tm == null){
-					throw new NullPointerException("Cannot have a null transition");
+					return false;
 			}
 			if(tm.getSuccesor() == this){
-					throw new IllegalArgumentException("Cannot transition to itself");
+					return false;
 			}
-			else pointers.add(tm);
+			else pointers.add(tm); return true;
 		}
 
 		//Output as XML
