@@ -20,7 +20,7 @@ public class ModelTest {
 		
 	}
 
-	@Test (expected = NullPointerException.class)
+	@Test
 	public void testTransitionNotAdded() {
 		
 		assertFalse(defaultStateModel.addTransition(null));
@@ -28,7 +28,7 @@ public class ModelTest {
 		
 	}
 	
-	@Test (expected = IllegalArgumentException.class)
+	@Test
 	public void testTransitionAlreadyAdded(){ 
 		
 		StateModel otherStateModel = new StateModel();
@@ -40,13 +40,12 @@ public class ModelTest {
 	
 	
 	//MIKEY TESTS
-	@Test (expected = IllegalArgumentException.class)
+	@Test
 	public void testTranitionToSelf(){
 		
 		defaultTransition = new TransitionModel("jfdkljdfs", defaultStateModel, defaultStateModel);
 		assertFalse(defaultStateModel.addTransition(defaultTransition));		
-		
-		
+			
 	}
 	
 	public void testPathForwardEqualsBackward(){

@@ -12,14 +12,22 @@ import java.util.List;
 public class StateModel {
 	
 		private String name;
+		private Object data;
 		private List<TransitionModel> pointers = new ArrayList<TransitionModel>();
 		
 		//Constructors
 		
+		public StateModel(String name, Object data){
+			
+			this.name = name;
+			this.data = data;
+				
+		}
+		
 		public StateModel(String name){
 			
 			this.name = name;
-				
+			
 		}
 		
 		public StateModel(){
@@ -54,13 +62,20 @@ public class StateModel {
 		//Setters
 		public boolean addTransition(TransitionModel tm){
 			
+			for(int i=0; i<pointers.size(); i++){
+				if(pointers.get(i) == tm){
+					return false;
+				}
+			}
+			
 			if(tm == null){
 					return false;
 			}
 			if(tm.getSuccesor() == this){
-					return false;
+						return false;
 			}
 			else pointers.add(tm); return true;
+			
 		}
 
 		//Output as XML
