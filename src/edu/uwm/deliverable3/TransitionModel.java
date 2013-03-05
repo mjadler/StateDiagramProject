@@ -36,6 +36,8 @@ public class TransitionModel {
 	//Output to XML
 	public String toXML(){
 		
+		if(this.name == null){throw new NullPointerException("Transition not initialized.");}		
+		
 		StringBuilder sb = new StringBuilder();
 		
 		sb.append("<transition name=\"" + name + "\">\n");
