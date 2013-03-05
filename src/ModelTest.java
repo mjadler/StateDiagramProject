@@ -31,7 +31,7 @@ public class ModelTest {
 	@Test
 	public void testTransitionAlreadyAdded(){ 
 		
-		StateModel otherStateModel = new StateModel(new Object());
+		StateModel otherStateModel = new StateModel();
 		TransitionModel t1 = new TransitionModel(defaultStateModel,otherStateModel);
 		assertTrue(defaultStateModel.addTransition(t1));
 		assertFalse(defaultStateModel.addTransition(t1));

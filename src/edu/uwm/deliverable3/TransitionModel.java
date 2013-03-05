@@ -8,8 +8,8 @@ package edu.uwm.deliverable3;
 public class TransitionModel {
 
 	private String name;
-	private StateModel succesor = new  StateModel(new Object());
-	private StateModel predecesor = new StateModel(new Object());
+	private StateModel succesor = new  StateModel();
+	private StateModel predecesor = new StateModel();
 	
 	//Constructors
 	public TransitionModel(String name, StateModel from, StateModel to){

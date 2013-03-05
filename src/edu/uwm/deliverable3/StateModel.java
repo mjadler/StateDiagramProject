@@ -24,10 +24,16 @@ public class StateModel {
 				
 		}
 		
-		public StateModel(Object data){
+		public StateModel(String name){
+			
+			this.name = name;
+			
+		}
+		
+		public StateModel(){
 			
 			this.name = "StateModelDefaultName";
-			this.data = data;
+			
 		}
 		
 		//Getters
