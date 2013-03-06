@@ -10,8 +10,6 @@ public class ModelTest {
 	
 	private StateModel defaultStateModel;
 	private TransitionModel defaultTransition;
-
-	//BRADY TESTS
 	
 	@Before
 	public void constructModel() {
@@ -38,18 +36,12 @@ public class ModelTest {
 		
 	}
 	
-	
-	//MIKEY TESTS
 	@Test
 	public void testTranitionToSelf(){
 		
 		defaultTransition = new TransitionModel("newTrans", defaultStateModel, defaultStateModel);
 		assertFalse(defaultStateModel.addTransition(defaultTransition));		
-<<<<<<< HEAD
-		
-=======
-			
->>>>>>> branch 'master' of https://github.com/mjadler/StateDiagramProject.git
+
 	}
 	
 	
@@ -128,7 +120,7 @@ public class ModelTest {
 				"		<transition name=\"t1to2\">\n"+
 				"				<transitionFrom>one</transitionFrom>\n"+
 				"				<transitionTo>two</transitionTo>\n"+
-				"</transition>\n"+
+				"		</transition>\n"+
 				"</state>\n";
 		
 		System.out.println(NASTYXMLSTRING);
