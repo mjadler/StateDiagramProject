@@ -108,7 +108,7 @@ public class ModelTest {
 		
 	}
 	
-	//Alex Tests
+	
 	@Test
 	public void testXML(){
 		StateModel sm1 = new StateModel("one");
