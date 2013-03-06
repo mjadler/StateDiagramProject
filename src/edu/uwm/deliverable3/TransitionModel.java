@@ -48,10 +48,10 @@ public class TransitionModel {
 		
 		StringBuilder sb = new StringBuilder();
 		
-		sb.append("<transition name=\"" + name + "\">\n");
+		sb.append("		<transition name=\"" + name + "\">\n");
 		sb.append("				<transitionFrom>"+predecesor.getName()+"</transitionFrom>\n");
-		sb.append("				<transitionTo>"+succesor.getName()+"</transitionTo>");
-		sb.append("</transition>\n");
+		sb.append("				<transitionTo>"+succesor.getName()+"</transitionTo>\n");
+		sb.append("		</transition>\n");
 		
 		return sb.toString();
 	}

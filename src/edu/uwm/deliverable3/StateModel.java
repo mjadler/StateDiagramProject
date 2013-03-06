@@ -85,7 +85,7 @@ public class StateModel {
 				
 			sb.append("<state name=\""+name+"\">\n" );
 			for(int i = 0; i< pointers.size(); i++){
-				sb.append("		"+pointers.get(i).toXML());
+				sb.append(pointers.get(i).toXML());
 			}
 			sb.append("</state>\n");
 			

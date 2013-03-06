@@ -31,7 +31,7 @@ public class ModelTest {
 		
 		StateModel otherStateModel = new StateModel();
 		TransitionModel t1 = new TransitionModel(defaultStateModel,otherStateModel);
-		assertFalse(defaultStateModel.addTransition(t1));
+		assertTrue(defaultStateModel.addTransition(t1));
 		assertFalse(defaultStateModel.addTransition(t1));
 		
 	}
@@ -114,6 +114,8 @@ public class ModelTest {
 		StateModel sm1 = new StateModel("one");
 		StateModel sm2 = new StateModel("two");
 		TransitionModel tm1 = new TransitionModel("t1to2", sm1, sm2);
+		
+		sm1.addTransition(tm1);
 		
 		String NASTYXMLSTRING = 
 				"<state name=\"one\">\n"+
